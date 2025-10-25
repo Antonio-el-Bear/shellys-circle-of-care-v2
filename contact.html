@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Shelly's Circle of Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="antialiased text-gray-700">
+    <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--primary-purple)] to-[var(--dark-purple)] flex items-center justify-center"><svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-7-4.438-9.5-7.125C-1 9.25 4.5 4 7.5 6.75 9 8 12 11 12 11s3-3 4.5-4.25C19.5 4 25 9.25 21.5 13.875 19 16.562 12 21 12 21z"/></svg></div>
+            <div class="hidden sm:block"><div class="text-[var(--dark-purple)] font-semibold text-lg tracking-tight">Shelly's Circle of Care</div><div class="text-[var(--primary-purple)] text-xs">Senior Wellness</div></div>
+          </a>
+          <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-medium text-gray-600 hover:text-[var(--primary-purple)]" href="index.html">Home</a>
+            <a class="text-sm font-medium text-gray-600 hover:text-[var(--primary-purple)]" href="about.html">About</a>
+            <a class="text-sm font-medium text-gray-600 hover:text-[var(--primary-purple)]" href="service.html">Services</a>
+            <a class="text-sm font-medium text-[var(--dark-purple)]" href="contact.html">Contact</a>
+            <a href="https://wa.me/27822943856" class="ml-4" target="_blank" rel="noopener noreferrer"><button class="bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white rounded-md px-4 py-2 shadow">WhatsApp Us</button></a>
+          </nav>
+          <div class="md:hidden"><button id="mobileMenuButton" aria-label="Toggle navigation menu" class="p-2 text-[var(--dark-purple)]"><svg id="menuIcon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+        </div>
+      </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100"><div class="px-4 py-6 space-y-4"><a href="index.html" class="block py-2 text-base font-medium">Home</a><a href="about.html" class="block py-2 text-base font-medium">About</a><a href="service.html" class="block py-2 text-base font-medium">Services</a><a href="contact.html" class="block py-2 text-base font-medium">Contact</a><a href="https://wa.me/27822943856" class="block" target="_blank" rel="noopener noreferrer"><button class="w-full bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white rounded-md px-4 py-2">WhatsApp Us</button></a></div></div>
+    </header>
+    <main class="pt-24">
+      <section class="relative bg-gradient-to-br from-[#f5f3ff] via-white to-[#ffe2e2] py-20 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="inline-block mb-4"><span class="px-4 py-1.5 bg-[var(--coral-pink)]/10 text-[var(--dark-purple)] rounded-full text-sm font-medium border border-[var(--coral-pink)]/20">Contact</span></div>
+          <h1 class="text-4xl md:text-5xl font-bold text-[var(--dark-purple)] mb-6">Get in touch with Shelly</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">I'd love to hear from you — whether you have questions, want to arrange a visit, or need support planning care.</p>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <form action="#" class="space-y-6 bg-white p-8 shadow-lg rounded-lg">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Full name</label>
+              <input type="text" name="name" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" placeholder="Your full name">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" name="email" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" placeholder="you@example.com">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Phone</label>
+              <input type="tel" name="phone" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" placeholder="+1234567890">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea name="message" rows="5" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" placeholder="How can I help?"></textarea>
+            </div>
+            <div class="flex gap-4">
+              <button type="submit" class="bg-[var(--dark-purple)] text-white px-6 py-3 rounded-md">Send message</button>
+              <a href="https://wa.me/27822943856" target="_blank" rel="noopener noreferrer" class="inline-block align-middle"><button type="button" class="border border-[var(--coral-pink)] text-[var(--dark-purple)] px-6 py-3 rounded-md">WhatsApp</button></a>
+            </div>
+          </form>
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div class="p-6 bg-white shadow rounded-lg">
+              <h3 class="font-semibold text-[var(--dark-purple)] mb-2">Phone</h3>
+              <p class="text-sm text-gray-600">+27822943856</p>
+            </div>
+            <div class="p-6 bg-white shadow rounded-lg">
+              <h3 class="font-semibold text-[var(--dark-purple)] mb-2">Email</h3>
+              <p class="text-sm text-gray-600">hello@shellyscircleofcare.example</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[var(--dark-purple)] text-white mt-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-[var(--coral-pink)] flex items-center justify-center">❤</div>
+              <div>
+                <div class="font-semibold">Shelly's Circle of Care</div>
+                <div class="text-xs text-white/70">Senior Wellness</div>
+              </div>
+            </div>
+            <p class="text-sm text-white/80 leading-relaxed">Providing compassionate, professional elder care with warmth and dignity.</p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-4">Quick Links</h3>
+            <div class="space-y-2">
+              <a href="index.html" class="block text-sm text-white/80 hover:text-white">Home</a>
+              <a href="about.html" class="block text-sm text-white/80 hover:text-white">About</a>
+              <a href="service.html" class="block text-sm text-white/80 hover:text-white">Services</a>
+              <a href="contact.html" class="block text-sm text-white/80 hover:text-white">Contact</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-4">Get in Touch</h3>
+            <p class="text-sm text-white/80 mb-4">Ready to provide your loved ones with the care they deserve?</p>
+            <a href="https://wa.me/27822943856" target="_blank" rel="noopener noreferrer"><button class="bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white w-full rounded-md px-4 py-2">Contact via WhatsApp</button></a>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm text-white/60">
+          <p>© 2025 Shelly's Circle of Care. All rights reserved.</p>
+          <p class="mt-2">ASCHP Registered Specialist Wellness Counsellor - Reg no 896</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="layout.js"></script>
+    <!-- Floating WhatsApp button -->
+    <a class="whatsapp-float" href="https://wa.me/27822943856" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp with Shelly">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M20.52 3.48A11.93 11.93 0 0012.01.5C6.01.5 1.22 5.29 1.22 11.29c0 1.99.52 3.92 1.51 5.62L.5 23.5l6.83-2.01a12.23 12.23 0 005.68 1.36h.01c6 0 10.79-4.79 10.79-10.79 0-1.83-.47-3.55-1.3-5.03zM12 21.22h-.01c-1.77 0-3.5-.47-5.02-1.36l-.36-.21-4.05 1.19 1.08-3.83-.24-.39A9.96 9.96 0 012.22 11.3c0-5.42 4.4-9.82 9.79-9.82 2.62 0 5.08 1.02 6.93 2.88 1.87 1.87 2.9 4.33 2.9 6.96 0 5.42-4.4 9.82-9.79 9.82z" fill="#fff"/><path d="M17.1 14.2c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15s-.77.97-.95 1.17c-.17.2-.34.23-.64.08-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.12.3-.33.45-.5.15-.17.2-.28.3-.47.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5-.17 0-.37 0-.57 0-.2 0-.52.07-.79.37-.27.3-1.06 1.03-1.06 2.5s1.09 2.9 1.24 3.1c.15.2 2.14 3.28 5.2 4.6 3.06 1.33 3.06.89 3.61.83.54-.06 1.77-.72 2.02-1.42.24-.7.24-1.3.17-1.42-.08-.12-.27-.2-.57-.35z" fill="#fff"/></svg>
+    </a>
+  </body>
+</html>
