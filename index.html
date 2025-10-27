@@ -13,13 +13,12 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-20">
           <a href="index.html" class="flex items-center gap-3 group">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--primary-purple)] to-[var(--dark-purple)] flex items-center justify-center transition-transform group-hover:scale-105">
-              <!-- simple heart icon -->
-              <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-7-4.438-9.5-7.125C-1 9.25 4.5 4 7.5 6.75 9 8 12 11 12 11s3-3 4.5-4.25C19.5 4 25 9.25 21.5 13.875 19 16.562 12 21 12 21z"/></svg>
+            <div class="w-12 h-12 overflow-hidden rounded-full bg-white flex items-center justify-center transition-transform group-hover:scale-105">
+              <img src="img/mainlogo.png" alt="Shelly's Circle of Care" class="w-12 h-12 object-cover" width="48" height="48" decoding="async" />
             </div>
             <div class="hidden sm:block">
               <div class="text-[var(--dark-purple)] font-semibold text-lg tracking-tight">Shelly's Circle of Care</div>
-              <div class="text-[var(--primary-purple)] text-xs">Senior Wellness</div>
+              <div class="text-[var(--primary-purple)] text-xs">Senior Wellness & Counselling</div>
             </div>
           </a>
 
@@ -64,8 +63,8 @@
               <div class="inline-block mb-4">
                 <span class="px-4 py-1.5 bg-[var(--coral-pink)]/10 text-[var(--dark-purple)] rounded-full text-sm font-medium border border-[var(--coral-pink)]/20">Professional Senior Wellness Care</span>
               </div>
-              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--dark-purple)] leading-tight mb-6">Compassionate Care for Your Loved Ones</h1>
-              <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Think of me as "almost-a-Family on call" — offering warmth, companionship, and professional support when you can't always be there.</p>
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--dark-purple)] leading-tight mb-6">Compassionate Care and Counselling for Your Loved Ones</h1>
+              <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Think of me as "Family on call" — offering warmth, companionship, and professional support when you can't always be there.</p>
               <div class="flex flex-col sm:flex-row gap-4">
                 <a href="contact.html" class="inline-block">
                   <button class="bg-[var(--dark-purple)] hover:bg-[#5a5876] text-white px-8 py-3 text-lg rounded-md">Get in Touch</button>
@@ -77,9 +76,40 @@
             </div>
 
             <div class="relative">
-              <div class="logo-hero-card">
-                <img id="logo1" src="img/mainlogo.png" alt="Shelly's Circle of Care Logo" class="absolute logo-anim logo-anim-show logo-hero-img" width="480" height="480" decoding="async" />
-                <img id="logo2" src="img/SCC_v03.png" alt="Shelly's Circle of Care Alt Logo" class="absolute logo-anim logo-anim-hide logo-hero-img" width="480" height="480" decoding="async" />
+              <div class="hero-image-card">
+                <div class="slideshow-container relative w-full h-full rounded-3xl shadow-2xl overflow-hidden">
+                  <div class="slide fade absolute inset-0">
+                    <img src="img/content_pic_01.jpg" alt="Professional Wellness Counselling" class="w-full h-full object-cover" width="540" height="540" decoding="async" />
+                    <div class="slide-overlay">
+                      <h3 class="text-xl md:text-2xl font-semibold mb-2">Professional Wellness Counselling</h3>
+                      <p>Dedicated support for emotional wellbeing and life transitions</p>
+                    </div>
+                  </div>
+                  <div class="slide fade absolute inset-0">
+                    <img src="img/content_pic_02.jpg" alt="Compassionate Companionship" class="w-full h-full object-cover" width="540" height="540" decoding="async" loading="lazy" />
+                    <div class="slide-overlay">
+                      <h3 class="text-xl md:text-2xl font-semibold mb-2">Meaningful Companionship</h3>
+                      <p>Creating connections through shared moments and conversations</p>
+                    </div>
+                  </div>
+                  <div class="slide fade absolute inset-0">
+                    <img src="img/content_pic_03.jpg" alt="Daily Living Support" class="w-full h-full object-cover" width="540" height="540" decoding="async" loading="lazy" />
+                    <div class="slide-overlay">
+                      <h3 class="text-xl md:text-2xl font-semibold mb-2">Practical Daily Support</h3>
+                      <p>Professional assistance with appointments and everyday activities</p>
+                    </div>
+                  </div>
+                  <div class="slide fade absolute inset-0">
+                    <img src="img/content_pic_04.jpg" alt="Personalized Care Services" class="w-full h-full object-cover" width="540" height="540" decoding="async" loading="lazy" />
+                    <div class="slide-overlay">
+                      <h3 class="text-xl md:text-2xl font-semibold mb-2">Personalized Care Journey</h3>
+                      <p>Tailored support that respects individual needs and preferences</p>
+                    </div>
+                  </div>
+                  <button class="prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all" aria-label="Previous slide">❮</button>
+                  <button class="next absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all" aria-label="Next slide">❯</button>
+                  <div class="dots absolute bottom-4 left-0 right-0 flex justify-center gap-2"></div>
+                </div>
               </div>
               <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-[var(--coral-pink)]/20 rounded-full soft-blur"></div>
               <div class="absolute -top-6 -left-6 w-48 h-48 bg-[var(--primary-purple)]/20 rounded-full soft-blur"></div>
@@ -97,38 +127,53 @@
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="p-6 bg-white shadow-lg rounded-lg text-center service-hover">
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center service-hover cursor-pointer" onclick="window.location.href='service.html#wellness'">
               <div class="w-20 h-20 rounded-2xl mx-auto mb-4 flex items-center justify-center gradient-secondary">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" class="text-white big-icon">
-                  <path d="M32 58s-18-11.42-24.43-18.33C-2.57 29.5 11.57 16 19.57 23.5 24 27.5 32 36 32 36s8-8.5 12.43-12.5C52.43 16 66.57 29.5 56.43 39.67 50 46.58 32 58 32 58z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white big-icon">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <path d="M12 22v-6"/>
+                  <path d="M12 8v6"/>
                 </svg>
               </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Wellness Counselling</h3>
-              <p class="text-gray-600">Gentle, person-centred support for the transitions of ageing</p>
+              <p class="text-gray-600">Professional counselling support with an Honours degree in Psychology</p>
+              <span class="text-sm text-[var(--primary-purple)] mt-2 block">Click for details →</span>
             </div>
 
-            <div class="p-6 bg-white shadow-lg rounded-lg text-center service-hover">
-              <div class="w-20 h-20 rounded-2xl mx-auto mb-4 flex items-center justify-center gradient-primary">
-                <span class="text-white big-icon">👥</span>
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center service-hover cursor-pointer" onclick="window.location.href='service.html#companionship'">
+              <div class="w-20 h-20 rounded-2xl mx-auto mb-4 flex items-center justify-center gradient-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white big-icon">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
               </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Companionship</h3>
-              <p class="text-gray-600">Meaningful connections, conversations, and celebration of special moments</p>
+              <p class="text-gray-600">Meaningful connections and shared moments with professional care</p>
+              <span class="text-sm text-[var(--primary-purple)] mt-2 block">Click for details →</span>
             </div>
 
-            <div class="p-6 bg-white shadow-lg rounded-lg text-center service-hover">
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center service-hover cursor-pointer" onclick="window.location.href='service.html#support'">
               <div class="w-20 h-20 rounded-2xl mx-auto mb-4 flex items-center justify-center gradient-secondary">
-                <span class="text-white big-icon">🛡️</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white big-icon">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
               </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Practical Support</h3>
-              <p class="text-gray-600">Assistance with daily affairs, appointments, and errands</p>
+              <p class="text-gray-600">Professional assistance with daily activities and routines</p>
+              <span class="text-sm text-[var(--primary-purple)] mt-2 block">Click for details →</span>
             </div>
 
-            <div class="p-6 bg-white shadow-lg rounded-lg text-center service-hover">
-              <div class="w-20 h-20 rounded-2xl mx-auto mb-4 flex items-center justify-center gradient-coral-reverse">
-                <span class="text-white big-icon">✨</span>
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center service-hover cursor-pointer" onclick="window.location.href='service.html#occasions'">
+              <div class="w-20 h-20 rounded-2xl mx-auto mb-4 flex items-center justify-center gradient-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white big-icon">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
               </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Special Occasions</h3>
-              <p class="text-gray-600">Creating joyful moments and personalised celebrations</p>
+              <p class="text-gray-600">Creating memorable celebrations and joyful moments</p>
+              <span class="text-sm text-[var(--primary-purple)] mt-2 block">Click for details →</span>
             </div>
           </div>
 
@@ -142,17 +187,17 @@
       <section class="py-20 bg-gradient-to-b from-[#f5f3ff] to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-purple)] mb-4">Why Families Trust Us</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-purple)] mb-4">Why Families Trust Shelly's Circle of Care</h2>
             <p class="text-lg text-gray-600 max-w-2xl mx-auto">More than just services — it's about relationships, trust, and genuine care</p>
           </div>
 
           <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
               <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">
-                <span class="text-white text-2xl">🏆</span>
+                <span class="text-white text-2xl">�</span>
               </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Professional & Qualified</h3>
-              <p class="text-gray-600">ASCHP-registered Specialist Wellness Counsellor with honours degree</p>
+              <p class="text-gray-600">Honours Degree in Psychology (UNISA) and ASCHP-registered Specialist Wellness Counsellor (Reg no 896)</p>
             </div>
 
             <div class="text-center">
@@ -196,12 +241,12 @@
         <div class="grid md:grid-cols-3 gap-8">
           <div>
             <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-full bg-[var(--coral-pink)] flex items-center justify-center">
-                <span class="text-white">❤</span>
+              <div class="w-10 h-10 overflow-hidden rounded-full bg-white flex items-center justify-center">
+                <img src="img/mainlogo.png" alt="Shelly's Circle of Care" class="w-10 h-10 object-cover" width="40" height="40" decoding="async" />
               </div>
               <div>
                 <div class="font-semibold">Shelly's Circle of Care</div>
-                <div class="text-xs text-white/70">Senior Wellness</div>
+                <div class="text-xs text-white/70">Senior Wellness & Counselling</div>
               </div>
             </div>
             <p class="text-sm text-white/80 leading-relaxed">Providing compassionate, professional elder care with warmth and dignity.</p>
@@ -233,20 +278,72 @@
 
     <script src="layout.js"></script>
     <script>
-    // Logo transition animation
-    let logo1 = document.getElementById('logo1');
-    let logo2 = document.getElementById('logo2');
-    let showingFirst = true;
-    setInterval(() => {
-      if (showingFirst) {
-        logo1.style.opacity = 0;
-        logo2.style.opacity = 1;
-      } else {
-        logo1.style.opacity = 1;
-        logo2.style.opacity = 0;
-      }
-      showingFirst = !showingFirst;
-    }, 3000);
+    // Slideshow functionality
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.querySelector('.dots');
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    let slideshowTimer;
+    let isPaused = false;
+    
+    // Create dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'dot';
+      dot.addEventListener('click', () => currentSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlides() {
+      if (isPaused) return;
+      
+      slides.forEach(slide => slide.style.opacity = '0');
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      
+      slides[slideIndex - 1].style.opacity = '1';
+      dots[slideIndex - 1].classList.add('active');
+      slideshowTimer = setTimeout(showSlides, 7000); // Changed to 7 seconds per slide
+    }
+
+    function currentSlide(n) {
+      clearTimeout(slideshowTimer);
+      slideIndex = n;
+      slides.forEach(slide => slide.style.opacity = '0');
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      slides[slideIndex].style.opacity = '1';
+      dots[slideIndex].classList.add('active');
+      slideshowTimer = setTimeout(showSlides, 7000);
+    }
+
+    // Pause on hover
+    slideshowContainer.addEventListener('mouseenter', () => {
+      isPaused = true;
+      clearTimeout(slideshowTimer);
+    });
+
+    slideshowContainer.addEventListener('mouseleave', () => {
+      isPaused = false;
+      showSlides();
+    });
+
+    // Next/previous controls
+    document.querySelector('.prev').addEventListener('click', () => {
+      slideIndex = slideIndex > 1 ? slideIndex - 2 : slides.length - 1;
+      showSlides();
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+      showSlides();
+    });
+
+    // Start slideshow
+    showSlides();
     </script>
     <!-- Floating WhatsApp button -->
   <a class="whatsapp-float" href="https://wa.me/27822943856" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp with Shelly">

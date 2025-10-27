@@ -1,29 +1,71 @@
-/* Hero logo card styles */
-.logo-hero-card {
+/* Hero image card styles */
+.hero-image-card {
   position: relative;
   width: min(90%, 540px);
   max-width: 540px;
-  aspect-ratio: 1 / 1; /* keep it square but responsive */
-  background: #fdebed;
+  aspect-ratio: 1 / 1;
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(135,133,162,0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.logo-hero-img {
-  width: 90%;
-  height: 90%;
-  max-width: 480px;
-  max-height: 480px;
-  object-fit: contain;
-  padding: 0;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-overlay {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  color: white;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide.active .slide-overlay {
+  transform: translateY(0);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+.dots {
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: white;
 }
 :root {
   --primary-purple: #8785a2;
