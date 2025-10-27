@@ -111,15 +111,20 @@ body {
 /* Navigation */
 .nav-link {
   position: relative;
-  transition: color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .nav-link.active {
   color: var(--dark-purple);
+  background-color: rgba(108, 106, 138, 0.1);
+  font-weight: 600;
 }
 
 .nav-link:hover:not(.active) {
   color: var(--primary-purple);
+  background-color: rgba(135, 133, 162, 0.05);
 }
 
 /* Buttons */
