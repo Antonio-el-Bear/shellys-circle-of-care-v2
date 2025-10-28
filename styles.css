@@ -12,15 +12,28 @@
 /* Slideshow */
 .slideshow-container {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .slide {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
+}
+
+/* Slideshow animations */
+.fade-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.zoom-fade.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .slide-overlay {
