@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Profile slideshow
         const slides = document.querySelectorAll('.slide');
         let currentSlideIndex = 0;
 
@@ -17,11 +18,38 @@
           slides[currentSlideIndex].classList.add('active');
         }
 
-        // Set initial state
+        // Set initial state for profile slideshow
         slides[0].classList.add('active');
         
-        // Change slides every 5 seconds
+        // Change profile slides every 5 seconds
         setInterval(showNextSlide, 5000);
+
+        // All collage slideshows (both grid and heart)
+        const collageSlideshows = document.querySelectorAll('.collage-slideshow');
+        
+        collageSlideshows.forEach((slideshow, index) => {
+          const slides = slideshow.querySelectorAll('.collage-slide');
+          let currentIndex = 0;
+          
+          // Create varied intervals for more organic feel
+          const baseInterval = 4000; // 4 seconds base
+          const randomOffset = Math.random() * 2000; // Random offset up to 2 seconds
+          const interval = baseInterval + randomOffset + (index % 3) * 1000; // Stagger by position
+          
+          function nextCollageSlide() {
+            slides[currentIndex].classList.remove('opacity-100');
+            slides[currentIndex].classList.add('opacity-0');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.remove('opacity-0');
+            slides[currentIndex].classList.add('opacity-100');
+          }
+          
+          // Start each slideshow with a random delay
+          const initialDelay = Math.random() * 3000; // Random initial delay up to 3 seconds
+          setTimeout(() => {
+            setInterval(nextCollageSlide, interval);
+          }, initialDelay);
+        });
       });
     </script>
   </head>
@@ -107,19 +135,25 @@
 
           <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center p-8 bg-white shadow-lg rounded-lg">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">🏅</div>
+              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">
+                <img src="img/star.png" alt="Star icon" class="w-10 h-10 object-contain" />
+              </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">ASCHP Registered</h3>
               <p class="text-gray-600">Specialist Wellness Counsellor - Registration No. 896</p>
             </div>
 
             <div class="text-center p-8 bg-white shadow-lg rounded-lg">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">🎓</div>
+              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">
+                <img src="img/business.png" alt="Business icon" class="w-10 h-10 object-contain" />
+              </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Honours Degree</h3>
               <p class="text-gray-600">Counselling Psychology qualification</p>
             </div>
 
             <div class="text-center p-8 bg-white shadow-lg rounded-lg">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">❤️</div>
+              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">
+                <img src="img/heart.png" alt="Heart icon" class="w-10 h-10 object-contain" />
+              </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Years of Experience</h3>
               <p class="text-gray-600">Dedicated to eldercare and senior wellness</p>
             </div>
@@ -129,9 +163,98 @@
 
       <section class="py-20 bg-gradient-to-b from-[#ffe2e2] to-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div class="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">👥</div>
+          <div class="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-br from-[var(--coral-pink)] to-[var(--primary-purple)] flex items-center justify-center">
+            <img src="img/buddy.png" alt="Buddy icon" class="w-14 h-14 object-contain" />
+          </div>
           <h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-purple)] mb-6">The "Family on Call" Concept</h2>
           <p class="space-y-4 text-lg text-gray-600 leading-relaxed">At the heart of Shelly's Circle of Care is the idea of being an "almost-a-Family on call." I step into that space with compassion, reliability, and dedication — offering the warmth, attention, and presence of a family member while maintaining professional boundaries and expertise.</p>
+        </div>
+      </section>
+
+      <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="image-collage flex flex-wrap justify-center items-center gap-1">
+            <div class="collage-cell w-32 h-32 rounded-lg overflow-hidden">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_01.jpg" alt="Care Moment 1" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_05.jpg" alt="Care Moment 5" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="collage-cell w-32 h-32 rounded-lg overflow-hidden">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_02.jpg" alt="Care Moment 2" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_06.jpg" alt="Care Moment 6" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="collage-cell w-32 h-32 rounded-lg overflow-hidden">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_03.jpg" alt="Care Moment 3" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_07.jpg" alt="Care Moment 7" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="collage-cell w-32 h-32 rounded-lg overflow-hidden">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_04.jpg" alt="Care Moment 4" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_08.jpg" alt="Care Moment 8" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="collage-cell w-32 h-32 rounded-lg overflow-hidden">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_01.jpg" alt="Care Moment 9" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_05.jpg" alt="Care Moment 10" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="collage-cell w-32 h-32 rounded-lg overflow-hidden">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_02.jpg" alt="Care Moment 11" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_06.jpg" alt="Care Moment 12" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="collage-cell w-32 h-32 rounded-lg overflow-hidden">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_03.jpg" alt="Care Moment 13" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_07.jpg" alt="Care Moment 14" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="collage-cell w-32 h-32 rounded-lg overflow-hidden">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_04.jpg" alt="Care Moment 15" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_08.jpg" alt="Care Moment 16" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -144,24 +267,89 @@
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="text-center p-6 bg-white shadow-lg rounded-lg">
-              <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#f5f3ff] flex items-center justify-center">❤️</div>
+              <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#f5f3ff] flex items-center justify-center">
+                <img src="img/heart.png" alt="Heart icon" class="w-10 h-10 object-contain" />
+              </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Compassion</h3>
               <p class="text-gray-600 text-sm">Every interaction is guided by genuine care and empathy</p>
             </div>
             <div class="text-center p-6 bg-white shadow-lg rounded-lg">
-              <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#f5f3ff] flex items-center justify-center">🛡️</div>
+              <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#f5f3ff] flex items-center justify-center">
+                <img src="img/deal.png" alt="Deal icon" class="w-10 h-10 object-contain" />
+              </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Dignity</h3>
               <p class="text-gray-600 text-sm">Treating every senior with respect and honouring their independence</p>
             </div>
             <div class="text-center p-6 bg-white shadow-lg rounded-lg">
-              <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#f5f3ff] flex items-center justify-center">👥</div>
+              <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#f5f3ff] flex items-center justify-center">
+                <img src="img/solidarity.png" alt="Solidarity icon" class="w-10 h-10 object-contain" />
+              </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Connection</h3>
               <p class="text-gray-600 text-sm">Building meaningful relationships that enrich lives</p>
             </div>
             <div class="text-center p-6 bg-white shadow-lg rounded-lg">
-              <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#f5f3ff] flex items-center justify-center">✨</div>
+              <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#f5f3ff] flex items-center justify-center">
+                <img src="img/shooting-star.png" alt="Shooting star icon" class="w-10 h-10 object-contain" />
+              </div>
               <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-3">Joy</h3>
               <p class="text-gray-600 text-sm">Creating moments that matter and bringing smiles to every day</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gradient-to-b from-white to-[#f5f3ff]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-purple)] mb-4">Our Care in Action</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Moments of connection, compassion, and joy in our community</p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+            <!-- Column 1 -->
+            <div class="relative overflow-hidden rounded-xl collage-item row-span-2">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_01.jpg" alt="Senior Care Moment 1" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_05.jpg" alt="Senior Care Moment 5" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="relative overflow-hidden rounded-xl collage-item">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_02.jpg" alt="Senior Care Moment 2" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_06.jpg" alt="Senior Care Moment 6" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-xl collage-item">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_03.jpg" alt="Senior Care Moment 3" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_07.jpg" alt="Senior Care Moment 7" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="relative overflow-hidden rounded-xl collage-item row-span-2">
+              <div class="collage-slideshow h-full">
+                <div class="collage-slide absolute inset-0 opacity-100 transition-all duration-1000">
+                  <img src="img/content_pic_04.jpg" alt="Senior Care Moment 4" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="collage-slide absolute inset-0 opacity-0 transition-all duration-1000">
+                  <img src="img/content_pic_08.jpg" alt="Senior Care Moment 8" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
