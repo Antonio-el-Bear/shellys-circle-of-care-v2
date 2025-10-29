@@ -31,23 +31,200 @@
     </header>
     <main class="pt-24">
       <section class="relative bg-gradient-to-br from-[#f5f3ff] via-white to-[#ffe2e2] py-20 text-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="inline-block mb-4"><span class="px-4 py-1.5 bg-[var(--coral-pink)]/10 text-[var(--dark-purple)] rounded-full text-sm font-medium border border-[var(--coral-pink)]/20">Our Services</span></div>
-          <h1 class="text-4xl md:text-5xl font-bold text-[var(--dark-purple)] mb-6">Comprehensive Care Tailored to Your Needs</h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">A unique blend of emotional support, companionship, and practical assistance designed to enrich the lives of seniors in their own environments</p>
-        </div>
-      </section>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="inline-block mb-4">
+              <span class="px-4 py-1.5 bg-[var(--coral-pink)]/10 text-[var(--dark-purple)] rounded-full text-sm font-medium border border-[var(--coral-pink)]/20">
+                Our Services
+              </span>
+            </div>
 
-      <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-purple)] mb-4">Core Service Areas</h2><p class="text-lg text-gray-600 max-w-2xl mx-auto">The foundation of compassionate, professional elder care</p></div>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="p-6 bg-white shadow-lg rounded-lg service-hover"><div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-secondary"><img src="img/heart.png" alt="Heart icon" class="w-12 h-12 object-contain" /></div><h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">Wellness Counselling & Emotional Support</h3><p class="text-gray-600 text-sm text-center">Gentle, person-centred counselling for seniors coping with loneliness, loss, stress, and the transitions of ageing.</p></div>
-            <div class="p-6 bg-white shadow-lg rounded-lg service-hover"><div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-primary"><img src="img/buddy.png" alt="Buddy icon" class="w-12 h-12 object-contain" /></div><h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">Companionship & Social Connection</h3><p class="text-gray-600 text-sm text-center">Meaningful visits, conversations, reminiscence activities, and celebrating important moments.</p></div>
-            <div class="p-6 bg-white shadow-lg rounded-lg service-hover"><div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-secondary"><img src="img/business.png" alt="Business icon" class="w-12 h-12 object-contain" /></div><h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">Practical & Personal Assistance</h3><p class="text-gray-600 text-sm text-center">Support with daily affairs, appointments, errands, and acting as a trusted link between the elder and their family.</p></div>
-            <div class="p-6 bg-white shadow-lg rounded-lg service-hover"><div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-coral-reverse"><img src="img/shooting-star.png" alt="Shooting star icon" class="w-12 h-12 object-contain" /></div><h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">Special Occasion & Joyful Care</h3><p class="text-gray-600 text-sm text-center">Creating moments of joy, from small celebrations to personalised touches.</p></div>
-            <div class="p-6 bg-white shadow-lg rounded-lg service-hover"><div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-secondary"><img src="img/home.png" alt="Home icon" class="w-12 h-12 object-contain" /></div><h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">Holistic Wellness & Enrichment</h3><p class="text-gray-600 text-sm text-center">Encouraging hobbies, creative expression, and gentle activities to maintain dignity and wellbeing.</p></div>
-            <div class="p-6 bg-white shadow-lg rounded-lg service-hover"><div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-coral-reverse"><img src="img/deal.png" alt="Deal icon" class="w-12 h-12 object-contain" /></div><h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">Collaboration & Advocacy</h3><p class="text-gray-600 text-sm text-center">Partnering with families, caregivers, and healthcare professionals to ensure seniors' needs are respected.</p></div>
+            <h1 class="text-4xl md:text-5xl font-bold text-[var(--dark-purple)] mb-6">
+              Comprehensive Care Tailored to Your Needs
+            </h1>
+
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              As a lay counsellor with an Honours Degree in Psychology and registered as a Specialist 
+              Wellness Counsellor with ASCHP, I offer compassionate emotional support and guidance to
+              elderly clients and their families. With years of experience in elder connection, I understand
+              the emotional, social, and practical challenges that come with aging.
+            </p>
+
+            <!-- Hidden "Read More" section -->
+            <div id="moreText" class="hidden mt-6 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              My counselling is grounded in a person-centred approach — creating a safe, understanding 
+              space where each client feels heard, respected, and supported. Sessions focus on emotional 
+              wellbeing, resilience, and restoring joy and meaning in daily life, always tailored to each 
+              person’s individual needs and pace.
+            </div>
+
+            <!-- Read More button -->
+                  <button id="readMoreBtn" class="mt-6 bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white rounded-md px-6 py-3 transition">
+                    Read More
+                  </button>
+            </div>
+
+                  <script>
+                    const readMoreBtn = document.getElementById('readMoreBtn');
+                    const moreText = document.getElementById('moreText');
+
+                    readMoreBtn.addEventListener('click', () => {
+                      if (moreText.classList.contains('hidden')) {
+                        moreText.classList.remove('hidden');
+                        readMoreBtn.textContent = 'Read Less';
+                      } else {
+                        moreText.classList.add('hidden');
+                        readMoreBtn.textContent = 'Read More';
+                      }
+                    });
+                  </script>
+                  <!-- USE the -->
+
+
+                <section class="py-20 bg-white">
+                  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-purple)] mb-4">Core Service Areas</h2><p class="text-lg text-gray-600 max-w-2xl mx-auto">The foundation of compassionate, professional elder care</p></div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                        <div class="p-6 bg-white shadow-lg rounded-lg service-hover">
+                  <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-secondary">
+                    <img src="img/heart.png" alt="Heart icon" class="w-12 h-12 object-contain" />
+                  </div>
+                  <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">
+                    Wellness Counselling & Emotional Support
+                  </h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Gentle, person-centred counselling for seniors coping with loneliness, loss, stress, and the transitions of ageing.
+                  </p>
+                </div>
+
+                <!-- Companionship & Social Connection -->
+                <div class="p-6 bg-white shadow-lg rounded-lg service-hover">
+                  <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-primary">
+                    <img src="img/buddy.png" alt="Buddy icon" class="w-12 h-12 object-contain" />
+                  </div>
+                  <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">
+                    Companionship & Social Connection
+                  </h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Loneliness and isolation are common struggles for many older adults — especially when family live far away. 
+                    My companionship and connection service offers meaningful social interaction, genuine conversation, and emotional presence.
+                  </p>
+                  <div id="companionshipMore" class="hidden mt-4 text-sm text-gray-600 text-center leading-relaxed">
+                    Whether it’s sharing a cup of tea, chatting about memories, or enjoying a favourite hobby together, 
+                    I bring warmth, consistency, and genuine care.
+                  </div>
+                  <button onclick="toggleMore('companionshipMore', this)" 
+                    class="mt-4 bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white rounded-md px-4 py-2 text-sm transition">
+                    Read More
+                  </button>
+                </div>
+
+                <!-- Practical & Personal Assistance -->
+                <div class="p-6 bg-white shadow-lg rounded-lg service-hover">
+                  <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-secondary">
+                    <img src="img/business.png" alt="Business icon" class="w-12 h-12 object-contain" />
+                  </div>
+                  <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">
+                    Practical & Personal Assistance
+                  </h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    I provide hands-on support to help make daily life easier, safer, and more enjoyable.
+                  </p>
+                  <div id="practicalMore" class="hidden mt-4 text-sm text-gray-600 text-center leading-relaxed">
+                    This includes assisting with appointments, accompanying clients to doctors, helping with technology such as video calls or Zoom sessions, 
+                    and arranging shopping or deliveries. I can also advise on home safety — from installing grab handles to rearranging spaces for comfort. 
+                    Every visit is personalised and done by me, ensuring consistent, caring support that makes a real difference.
+                  </div>
+                  <button onclick="toggleMore('practicalMore', this)" 
+                    class="mt-4 bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white rounded-md px-4 py-2 text-sm transition">
+                    Read More
+                  </button>
+                </div>
+
+                <!-- Special Occasion & Joyful Care -->
+                <div class="p-6 bg-white shadow-lg rounded-lg service-hover">
+                  <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-coral-reverse">
+                    <img src="img/shooting-star.png" alt="Shooting star icon" class="w-12 h-12 object-contain" />
+                  </div>
+                  <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">
+                    Special Occasion & Joyful Care
+                  </h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Every person deserves to feel celebrated and cherished — especially in later years.
+                  </p>
+                  <div id="joyfulMore" class="hidden mt-4 text-sm text-gray-600 text-center leading-relaxed">
+                    My Special Occasions & Joyful Care service is all about creating moments of meaning and joy — birthdays, anniversaries, 
+                    or just a day that needs brightening. From arranging a favourite cake, balloons, or flowers to organising a small gathering, 
+                    music, or surprise, I bring creativity and care to every detail, reminding each person they are loved and valued.
+                  </div>
+                  <button onclick="toggleMore('joyfulMore', this)" 
+                    class="mt-4 bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white rounded-md px-4 py-2 text-sm transition">
+                    Read More
+                  </button>
+                </div>
+
+                <!-- Holistic Wellness & Enrichment -->
+                <div class="p-6 bg-white shadow-lg rounded-lg service-hover">
+                  <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-secondary">
+                    <img src="img/home.png" alt="Home icon" class="w-12 h-12 object-contain" />
+                  </div>
+                  <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">
+                    Holistic Wellness & Enrichment
+                  </h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    True wellbeing is more than physical health — it’s about nurturing the mind, body, and spirit.
+                  </p>
+                  <div id="wellnessMore" class="hidden mt-4 text-sm text-gray-600 text-center leading-relaxed">
+                    My service focuses on creating a balanced, meaningful lifestyle through reading, conversation, creative or memory activities, 
+                    music, relaxation, and time outdoors — all designed to uplift mood, encourage purpose, and bring joy. Every session is 
+                    person-centred and supports curiosity, vitality, and fulfilment in later years.
+                  </div>
+                  <button onclick="toggleMore('wellnessMore', this)" 
+                    class="mt-4 bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white rounded-md px-4 py-2 text-sm transition">
+                    Read More
+                  </button>
+                </div>
+
+                <!-- Collaboration & Advocacy -->
+                <div class="p-6 bg-white shadow-lg rounded-lg service-hover">
+                  <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-4 mx-auto gradient-coral-reverse">
+                    <img src="img/deal.png" alt="Deal icon" class="w-12 h-12 object-contain" />
+                  </div>
+                  <h3 class="text-xl font-semibold text-[var(--dark-purple)] mb-2 text-center">
+                    Collaboration & Advocacy
+                  </h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    I offer guidance, coordination, and peace of mind for families navigating elder care.
+                  </p>
+                  <div id="collaborationMore" class="hidden mt-4 text-sm text-gray-600 text-center leading-relaxed">
+                    I help families explore home-based care, assisted living, or palliative support options and coordinate with trusted providers. 
+                    I ensure care is consistent and dignified — personally involved as your eyes and ears on the ground to ensure every need is respected.
+                  </div>
+                  <button onclick="toggleMore('collaborationMore', this)" 
+                    class="mt-4 bg-[var(--coral-pink)] hover:bg-[#ff9f9f] text-white rounded-md px-4 py-2 text-sm transition">
+                    Read More
+                  </button>
+                </div>
+              </div>
+
+             
+            </div>
+
+            <!-- Toggle Script -->
+            <script>
+              function toggleMore(id, btn) {
+                const section = document.getElementById(id);
+                if (!section) return;
+
+                const isHidden = section.classList.contains('hidden');
+                if (isHidden) {
+                  section.classList.remove('hidden');
+                  btn.textContent = 'Read Less';
+                } else {
+                  section.classList.add('hidden');
+                  btn.textContent = 'Read More';
+                }
+              }
+            </script>
           </div>
           <div class="text-center mt-12"><a href="contact.html" class="inline-block border border-[var(--primary-purple)] text-[var(--dark-purple)] hover:bg-[#f5f3ff] px-6 py-3 rounded-md">Get in Touch</a></div>
         </div>
